@@ -33,4 +33,3 @@ WITH rebuilt AS (
 SELECT *
 FROM rebuilt
 ORDER BY event_date;
-```

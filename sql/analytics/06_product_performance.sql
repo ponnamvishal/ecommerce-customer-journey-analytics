@@ -1,4 +1,3 @@
-
 /*
 File: 06_product_performance.sql
 Purpose: Reconstruct product-level performance metrics.
@@ -18,7 +17,7 @@ WITH product_metrics AS (
         ) FILTER (
             WHERE category_code IS NOT NULL
         ) AS category_code,
-                MAX(brand) FILTER (
+            MAX(brand) FILTER (
             WHERE brand IS NOT NULL
         ) AS brand,
         COUNT(*) FILTER (

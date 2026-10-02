@@ -1,4 +1,3 @@
-
 /*
 File: 02_customer_segments.sql
 Purpose: Reconstruct customer segment classification.
@@ -29,9 +28,9 @@ WITH customer_metrics AS (
         COUNT(DISTINCT product_id) FILTER (
             WHERE event_type = 'purchase'
         ) AS unique_products_purchased,
-                COALESCE(
+         COALESCE(
             SUM(price) FILTER (
-                WHERE event_type = 'purchase'
+            WHERE event_type = 'purchase'
             ),
             0
         ) AS total_revenue,
